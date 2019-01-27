@@ -35,3 +35,5 @@ This sample shows how to use [Flask](http://flask.pocoo.org/) to handle
 requests, forms, templates,  static files and data stores within the Google App Engine runtime.
 
 Files that we may need during our further development can be found in `snippets` and `templates/snippets`.
+
+Thanks to Aaron Asaro for his tips on getting Google App Engine set up in a relatively pain free way.
