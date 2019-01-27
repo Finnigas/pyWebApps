@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Stored feeds
+{% endblock %}
+
+{% block content %}
+    <h1> My feeds
+    </h1>
+
+    {% for feed in feeds %}
+        <a href="{{ url_for('view_feed', rss_url=feed.url) }}">
+            {{ feed.name }}
+        </a>
+    {% endfor %}
+{% endblock %}

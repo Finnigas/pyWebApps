@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}New feed{% endblock %}
+
+{% block content %}
+  <h1>New Feed</h1>
+
+  <form action="{{ url_for('new_feed') }}" method="POST">
+    <div class="form-group">
+      <label for="name">Feed name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Example name">
+    </div>
+
+    <div class="form-group">
+      <label for="url">Feed URL</label>
+      <input type="url" class="form-control" id="url" name="url" placeholder="Example URL">
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+ 
+  </form>
+{% endblock %}
