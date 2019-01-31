@@ -2,9 +2,9 @@
 
 {# Overwrite "blocks" defined in the base template. This saves typing if you have lots of similar pages and ensure that pages look consistent #}
 {% block title %}
-    Prettyish index page
+    Calculator page
 {% endblock %}
 
 {% block content %}
-    <h1>{{ feed.title }}</h1>
+    The sum of {{ a }} plus {{ b }} is {{ ab_sum }}
 {% endblock %}

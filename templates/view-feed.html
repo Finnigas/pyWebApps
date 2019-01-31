@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ feed.title }} feed
+{% endblock %}
+
+{% block content %}
+    <h1>{{ feed.title }} feed</h1>
+
+    {% for entry in entries %}
+        <a href="{{ entry.link }}">
+         {{ entry.title }}
+        </a>
+
+        {# The description may already contain valid HTML tags, the "|safe" tells the template processes to just flush these through. In some cases this can cause security issues hence the word "safe" being used #}
+        <p>
+        {{ entry.description|safe }}
+        </p>
+
+        <hr/>
+
+    {% endfor %}
+{% endblock %}
